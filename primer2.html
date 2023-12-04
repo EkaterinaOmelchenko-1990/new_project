@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Треугольник</title>
+  <style>
+   .block {
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    color: #000;
+   }
+   .block::after {
+    content: ''; 
+    position: absolute; /* Абсолютное позиционирование */
+    right: 0px; /* Положение треугольника */
+    border: 10px solid transparent; /* Прозрачные границы */
+    border-top: 10px solid green; /* Добавляем треугольник */
+    float: left;
+   }
+  </style>
+ </head>
+ <body>
+  <div class="block">
+   Глокая куздра штеко будланула бокра и кудрячит бокрёнка.
+  </div>
+ </body>
+</html>
