@@ -1,52 +1,49 @@
 @font-face {
-    font-family: "Montserrat",sans-serif;
+    font-family: "Mulish";
     font-weight: 700;
-    src: url(./fonts/Montserrat/static/Montserrat-Bold.ttf);
+    src: url(./fonts/Mulish/static/Mulish-Bold.ttf);
 }
+
 @font-face {
-    font-family: "Roboto", sans-serif;
+    font-family: "Ubuntu";
     font-weight: 400;
-    src: url(./fonts/Roboto/Roboto-Regular.ttf);
+    src: url(./fonts/Ubuntu/Ubuntu-Regular.ttf);
 }
-@font-face {
-    font-family: "Oswald", sans-serif;
-    font-weight: 700;
-    src: url(./fonts/Oswald/static/Oswald-Bold.ttf);
-}
-@font-face {
-    font-family: "Oswald";
-    font-weight: 400;
-    src: url(./fonts/Oswald/static/Oswald-Regular.ttf);
-}
-:root{
-    --main-color: #f2c94c;
+
+:root {
+    --main-color: #c3024e;
     --header-logo: "Oswald", sans-serif;
 }
 
-@maintitle: "Montserrat",sans-serif;
-* { 
+@maintitle: "Ubuntu", sans-serif;
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     font-size: 10px;
-    font-family: "Roboto" sans-serif;
+    font-family: "Ubuntu" sans-serif;
 }
 
-body{
-    background-image: url(./img/bg.jpg);
+body {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: url('./imq/bg.jpg');
 }
-.bg{
+
+.bg {
     width: 100%;
     height: 100%;
-    background-color: rgb(27 29 60 / 80%);
+    background-color: rgba(110, 27, 27, 50%);
+
 }
-.wrapper{
-    width: calc( 100% - 90px);
+
+.wrapper {
+    width: calc(100% - 90px);
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -63,19 +60,23 @@ body{
 .header-logo {
     margin-top: 4rem;
 }
+
 .logo-link {
     text-decoration: none;
     color: var(--main-color);
     text-transform: uppercase;
     font-size: 3rem;
-    font-family: "Oswald",sans-serif;
+    font-family: "Mulish", sans-serif;
     font-weight: 700;
-    span{
+
+    span {
         color: #fff;
     }
 }
-nav{
+
+nav {
     margin-top: 4.7rem;
+
     .nav-list {
         list-style: none;
         margin: 0;
@@ -83,74 +84,74 @@ nav{
         font-size: 0;
     }
 }
+
 .nav-item {
-    &__link
-        {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-family: "Oswald",sans-serif;
-            font-weight: 400;
-            padding: 12px 5px;
-            display: block;
-            font-size: 1.7rem;
-            transition: all 0.3s ease-in;
-        }
-    &__link:hover{
-        color: var(--main-color); 
+    &__link {
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 400;
+        padding: 12px 5px;
+        display: block;
+        font-size: 1.7rem;
+        transition: all 0.3s ease-in;
+    }
+
+    &__link:hover {
+        color: var(--main-color);
     }
 }
 
-.header-support {
-    display: flex;
-    flex-direction: column;
-    margin-top: 5rem;
-}
-
-.support, .contact{
+.main-content__contact {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: "Oswald", sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     padding: 12px 5px;
     display: block;
     font-size: 1.7rem;
-    transition: all 0.3s ease-in;  
+    transition: all 0.3s ease-in;
+    span {
+        color: #909090;
+        font-weight: 900;
+    }
 }
 
-.support:hover, .contact:hover{
-    color: var(--main-color);
-}
+
 
 .main-content {
     margin-left: 10.4rem;
     margin-top: 20rem;
 
-    &__title{
+    &__title {
         font-size: 4.6rem;
         color: #fff;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Mulish", sans-serif;
         font-weight: 700;
-        text-transform: uppercase;
-        span{
+
+        span {
             color: var(--main-color);
-            font-size: 9rem;
         }
     }
 
-    &__descript{
-font-size: 14px;
-color: #fff;
-line-height: 40px;
-margin-bottom: 3rem;
+    &__descript {
+        font-size: 16px;
+        color: #fff;
+        line-height: 40px;
+        margin-bottom: 3rem;
+
+        span {
+            font-size: 25px;
+        }
     }
 }
 
 .btn {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Mulish", sans-serif;
     font-weight: 700;
-    background-color: transparent ;
+    background-color: transparent;
     font-style: 2.2rem;
     color: #fff;
     border: 2px solid var(--main-color);
@@ -158,79 +159,122 @@ margin-bottom: 3rem;
     padding: 15px 10.6 rem;
     width: 17.6rem;
     height: 4.1rem;
-}
+    
+}:enabled
 
 .block-img {
     margin-top: 5rem;
-    display: flex;    
+    display: flex;
     padding: 50px, 0px;
+    flex-direction: column;
 }
 
 .image {
-  
     margin-right: 10px;
-    width: 14.6rem;
+    width: 146rem;
     max-width: 100%;
-    border: 2px solid var(--main-color);;
-}
-/* Downward triangle */
-.main-basement {
-    margin-left: 10.4rem;
-    margin-top: 5rem;
-}
-.main-basement__title {
-    font-size: 2.1rem;
-        color: #fff;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 700;
-        text-transform: uppercase;
-        span {
-            display: inline-block;
-            border: 14px solid transparent;
-            border-top: 18px solid var(--main-color);
-            position: absolute;
-        }
-        span:after {
-            content: '';
-            display: inline-block;
-            position: absolute;
-            top: -16px;
-            left: -11px;
-            border: 11px solid transparent;
-            border-top: 13px solid rgb(27 29 60 / 80%);
-        }
+    ;
 }
 
-.main-basement__descript {
-    font-size: 8px;
-        color: #fff;
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
+
+.main-content__info {
+    font-size: 16px;
+    color: #fff;
+    font-family: "Mulish", sans-serif;
+    font-weight: 700;   
 }
-.footer-block
-{
-    width: 116px;
-    height: 36.5px;
-    margin-left: -10.4rem;
-    background-color: var(--main-color);
-    border-radius: 0px 0px 10px 10px;
+
+.footer-block {
+    width: 96px;
+    height: 56px;
+    margin-left: -10rem;
+    border-radius: 0px 0px 50px 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-image: url('./imq/el.jpg');
+    background-size: contain;
 }
-.image-button-t {
-    width: 22.92px;
+
+.image-button-vk {
+    width: 18.69px;
     height: 18.69px;
     border: none;
-    background-image: url('./imq/tw.png');
-    background-size: auto;
-    background-color: transparent ;
-  }
-  .image-button-f {
-    width: 11.46px;
+    background-image: url('./imq/vk.png');
+    background-size: contain;
+    background-color: transparent;
+}
+
+.image-button-od {
+    width: 12.4px;
     height: 20.83px;
     border: none;
-    background-image: url('./imq/f.png');
+    background-image: url('./imq/od.svg');
     background-size: auto;
-    background-color: transparent ;
-  }
+    background-color: #fff;
+    background-position: center center;
+}
+
+@media(max-width:768px) {
+    .main-content__title {
+        font-size: 35px;
+    }
+
+    .main-content__descript {
+        line-height: 30px;
+    }
+
+    .btn {
+        font-size: 1.1rem;
+        padding: 10px 12px;
+    }
+    .main-content__info {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:320px) {
+    .wrapper {
+        width: calc(100% - 10px);
+    }
+    .main-content {
+        margin-left: 10.4px;
+        margin-top: 20px;
+    }
+    .main-content__title {
+        font-size: 14px;
+    }
+
+    .main-content__descript {
+        font-size: 8px;
+        span{
+            font-size: 10px;
+        }
+    }
+
+    .header-block {
+        width: 14rem;
+    }
+    
+    .header-logo {
+        margin-top: 2rem;
+    }
+    
+    .logo-link {
+        font-size: 14px;        
+    }
+    
+    nav {
+        margin-top: 2.4rem; 
+    }
+    
+    .nav-item {
+        &__link {
+           
+            font-size: 9px;
+        }
+    }
+    .main-content__info {
+        font-size: 9px;
+    }
+}
